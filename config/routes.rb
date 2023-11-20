@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   root to: "home#index"
 
+  get "sign_up", to: "registrations#new"
+
 end

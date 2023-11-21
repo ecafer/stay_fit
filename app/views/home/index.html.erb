@@ -53,6 +53,7 @@
       <p>Your Personal Fitness Hub</p>
       <button><%= link_to "Sign Up", sign_up_path %></button>
       <button><%= link_to "Log In", log_in_path %></button>
+      <button><%= link_to "Log Out", log_out_path %> </button>
       
     </header>
     <% if flash[:notice] %>
@@ -62,6 +63,10 @@
     <% if flash[:alert] %>
       <div class="alert"><%= flash[:alert] %></div>
     <% end %>
+
+    <% if @user %>
+      Logged in as: <%= @user.email%>
+    <% end %>  
   </body>
 </html>
 

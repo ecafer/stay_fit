@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 
   post "log_in", to: "registrations#login"
 
+  get "log_out", to: "registrations#logout"
+
 end

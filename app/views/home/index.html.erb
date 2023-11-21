@@ -51,9 +51,17 @@
     <header>
       <h1>Welcome to Your Fitness App</h1>
       <p>Your Personal Fitness Hub</p>
-      <button><%= link_to "Sign Up", sign_up_path %></button> 
+      <button><%= link_to "Sign Up", sign_up_path %></button>
+      <button><%= link_to "Log In", log_in_path %></button>
       
     </header>
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
+    
+    <% if flash[:alert] %>
+      <div class="alert"><%= flash[:alert] %></div>
+    <% end %>
   </body>
 </html>
 
